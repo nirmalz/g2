@@ -11,12 +11,18 @@
 |
 */
 
+function pre($data){
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+}
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('register', function(){
-    return view('form');
-});
+// Route related to student
+Route::get('register', 'StudentController@viewForm');
+Route::post('register', 'StudentController@createStudent');
 
-// Till second class
+
