@@ -21,4 +21,14 @@ function pre($data){
 Route::get('register', 'StudentController@viewForm');
 Route::post('register', 'StudentController@createStudent');
 
+Route::get('home', function(){
+    return view('home');
+});
 
+Route::get('contact', function(){
+    return view('contact');
+});
+
+Route::get('faq', function(){
+    return view('faq');
+});
