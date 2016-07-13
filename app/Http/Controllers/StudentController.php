@@ -12,7 +12,11 @@ class StudentController extends Controller
 
     public function viewForm(){
 
-        return view('form');
+        $students = Student::all();
+
+        return view('form', array(
+            'students'  => $students
+        ));
 
     }
 

@@ -17,10 +17,6 @@ function pre($data){
     echo '</pre>';
 }
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Route related to student
 Route::get('register', 'StudentController@viewForm');
 Route::post('register', 'StudentController@createStudent');
