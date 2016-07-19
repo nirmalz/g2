@@ -36,3 +36,11 @@ function pre($data){
 Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
+
+Route::get('test', function(){
+
+    $article1 = \App\Article::find(1);
+
+    
+
+});
