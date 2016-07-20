@@ -35,12 +35,7 @@ function pre($data){
 
 Route::auth();
 Route::get('/home', 'HomeController@index');
-Route::get('/', 'HomeController@index');
 
-Route::get('test', function(){
+Route::get('dashboard', 'UserController@displayDashboard');
 
-    $article1 = \App\Article::find(1);
 
-    
-
-});
