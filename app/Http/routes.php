@@ -33,6 +33,10 @@ function pre($data){
 //    return view('faq');
 //});
 
+Route::get('/', function(){
+    return view('welcome');
+});
+
 Route::auth();
 Route::get('/home', 'HomeController@index');
 
