@@ -42,4 +42,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('dashboard', 'UserController@displayDashboard');
 
+Route::post('create-author', 'UserController@createAuthor');
+
 

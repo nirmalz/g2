@@ -33,5 +33,12 @@ class UserController extends Controller
         return view('authorDash');
     }
 
+    public function createAuthor(Request $request){
+
+        pre($request->all());
+        exit;
+
+    }
+
 
 }

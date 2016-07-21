@@ -1,3 +1,1 @@
-This is author area.
-<br>
-Author DASHBOARD
+@extends('layouts.app')
