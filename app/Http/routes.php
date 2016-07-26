@@ -42,6 +42,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('dashboard', 'UserController@displayDashboard');
 
+/*Routes related to admin*/
 Route::post('create-author', 'UserController@createAuthor');
 
+
+/*Routes related to author*/
+Route::post('create-article', 'ArticleController@createArticle');
 

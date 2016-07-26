@@ -26,10 +26,17 @@ class UserController extends Controller
 
 
     public function showAdminDash(){
-        return view('adminDash');
+
+        $authors = User::where('level', '=', 'author')->get();
+
+        return view('adminDash', array(
+            'authors' => $authors
+        ));
+
     }
 
     public function showAuthorDash(){
+
         return view('authorDash');
     }
 
