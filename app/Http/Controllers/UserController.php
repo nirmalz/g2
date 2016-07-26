@@ -42,8 +42,25 @@ class UserController extends Controller
 
     public function createAuthor(Request $request){
 
-        pre($request->all());
-        exit;
+        $validator =  Validator::make($request->all(), array(
+            'name'      => 'required|max:255',
+            'email'     => 'required|email|max:255|unique:users',
+            'password'  => 'required|min:6|confirmed',
+        ));
+
+        if($validator->fails()){
+            return redirect('dashboard')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $data = $request->all();
+        $data['level'] = 'author';
+        $data['password'] = bcrypt($request->password);
+
+        User::create($data);
+
+        return redirect('dashboard');
 
     }
 
