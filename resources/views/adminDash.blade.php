@@ -8,4 +8,11 @@
 
     </div>
 
+    <div class="col-md-7 col-sm-7">
+
+        @include('partials.authorsList')
+
+    </div>
+
+
 @stop
